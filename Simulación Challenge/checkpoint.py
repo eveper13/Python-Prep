@@ -12,7 +12,18 @@ def Factorial(numero):
         Factorial(-2) debe retornar nulo
     '''
     #Tu código aca:
-    return 'Funcion incompleta'
+
+     # Verificamos si el número es de tipo entero y si es mayor o igual a 1
+    if not isinstance(numero, int) or numero < 1:
+        return None
+    
+    # Inicializamos el resultado del factorial como 1
+    factorial_result = 1
+    
+    # Iteramos desde 1 hasta el número, multiplicando cada iteración al resultado
+    for i in range(1, numero + 1):
+        factorial_result *= i
+    return factorial_result
 
 def EsPrimo(valor):
     '''
